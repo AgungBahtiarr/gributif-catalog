@@ -1,0 +1,17 @@
+---
+import Navbar from "@/components/global/Navbar.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/global/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead />
+  </head>
+
+  <body class="bg-charcoal-500">
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>

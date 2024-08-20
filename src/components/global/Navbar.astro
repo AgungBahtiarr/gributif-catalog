@@ -1,0 +1,50 @@
+<div class="text-black sticky top-0 z-10">
+  <div class="drawer">
+    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col">
+      <div class="navbar bg-negroni-500 w-full md:px-32">
+        <div class="flex-none lg:hidden">
+          <label
+            for="my-drawer-3"
+            aria-label="open sidebar"
+            class="btn btn-square btn-ghost"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block h-6 w-6 stroke-current"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </label>
+        </div>
+        <div class="mx-2 flex-1 px-2 font-bold text-xl">GRIBUTIF</div>
+        <div class="hidden flex-none lg:block">
+          <ul class="menu menu-horizontal font-semibold text-md">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-side">
+      <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"
+      ></label>
+
+      <ul class="menu bg-negroni-500 min-h-full w-80 p-4 text-md">
+        <div class="mx-2 py-3 px-2 font-bold text-xl">GRIBUTIF</div>
+
+        <li><a>Home</a></li>
+        <li><a>Products</a></li>
+        <li><a>About</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

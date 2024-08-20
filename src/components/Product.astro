@@ -1,0 +1,175 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div class="text-white">
+  <div class="grid grid-cols-2 items-center my-4">
+    <h1 class="text-2xl font-bold md:text-3xl lg:text-4xl">
+      Nama Produk hello world dolor sit amet
+    </h1>
+    <div class="justify-self-end">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-qr-code"
+        ><rect width="5" height="5" x="3" y="3" rx="1"></rect><rect
+          width="5"
+          height="5"
+          x="16"
+          y="3"
+          rx="1"></rect><rect width="5" height="5" x="3" y="16" rx="1"
+        ></rect><path d="M21 16h-3a2 2 0 0 0-2 2v3"></path><path d="M21 21v.01"
+        ></path><path d="M12 7v3a2 2 0 0 1-2 2H7"></path><path d="M3 12h.01"
+        ></path><path d="M12 3h.01"></path><path d="M12 16v.01"></path><path
+          d="M16 12h1"></path><path d="M21 12v.01"></path><path d="M12 21v-1"
+        ></path></svg
+      >
+    </div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-4">
+    <div class="flex flex-col gap-4">
+      <Image
+        src="https://plus.unsplash.com/premium_photo-1664392230823-2b48a024c2df?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Bamboo Craft"
+        width={1000}
+        height={1000}
+        class:list={["rounded-md"]}
+      />
+
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <div class="grid grid-cols-2 gap-4">
+            <Image
+              src="https://plus.unsplash.com/premium_photo-1664392230823-2b48a024c2df?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Bamboo Craft"
+              width={1000}
+              height={1000}
+              class:list={["rounded-md"]}
+            />
+            <Image
+              src="https://plus.unsplash.com/premium_photo-1664392230823-2b48a024c2df?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Bamboo Craft"
+              width={1000}
+              height={1000}
+              class:list={["rounded-md"]}
+            />
+          </div>
+
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <div class="grid grid-cols-2 gap-4">
+            <Image
+              src="https://plus.unsplash.com/premium_photo-1664392230823-2b48a024c2df?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Bamboo Craft"
+              width={1000}
+              height={1000}
+              class:list={["rounded-md"]}
+            />
+            <Image
+              src="https://plus.unsplash.com/premium_photo-1664392230823-2b48a024c2df?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Bamboo Craft"
+              width={1000}
+              height={1000}
+              class:list={["rounded-md"]}
+            />
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 md:mt-0">
+      <!-- <div class="divider"></div> -->
+
+      <div class="spec">
+        <h2 class="font-semibold text-xl mb-4">Spesifikasi</h2>
+        <ul class="w-[80%]">
+          <li class="mt-2">
+            <div class="grid grid-cols-8">
+              <span class="col-span-2">Ketersediaan</span>
+              <span class="col-span-1">:</span>
+              <span class="col-span-5">
+                <span class="badge badge-outline">Ada</span></span
+              >
+            </div>
+          </li>
+          <li class="mt-2">
+            <div class="grid grid-cols-8">
+              <span class="col-span-2">Jumlah Stok</span>
+              <span class="col-span-1">:</span>
+              <span class="col-span-5">50</span>
+            </div>
+          </li>
+          <li class="mt-2">
+            <div class="grid grid-cols-8">
+              <span class="col-span-2">Harga</span>
+              <span class="col-span-1">:</span>
+              <span class="col-span-5">Rp. 50.000,00;</span>
+            </div>
+          </li>
+          <li class="mt-2">
+            <div class="grid grid-cols-8">
+              <span class="col-span-2">Ukuran</span>
+              <span class="col-span-1">:</span>
+              <span class="col-span-5">10 CM</span>
+            </div>
+          </li>
+          <li class="mt-2">
+            <div class="grid grid-cols-8">
+              <span class="col-span-2">Berat</span>
+              <span class="col-span-1">:</span>
+              <span class="col-span-5">10 KG</span>
+            </div>
+          </li>
+          <li class="mt-2">
+            <div class="grid grid-cols-8">
+              <span class="col-span-2">Material</span>
+              <span class="col-span-1">:</span>
+              <span class="col-span-5">Bamboo</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+      <h2 class="font-semibold text-xl my-4">Deskripsi</h2>
+      <p class="text-justify">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nobis
+        ipsum porro dolores nulla voluptatem temporibus libero eveniet quia
+        neque alias, officiis dicta laboriosam possimus, architecto commodi
+        omnis quam quis! Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Officia est soluta, porro in quod doloremque atque neque
+        consequuntur totam, Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Eaque numquam illo sunt architecto porro dolorum laborum?
+        Laboriosam neque reprehenderit asperiores provident laudantium magni,
+        eum quidem enim minima velit commodi accusantium!
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 w-full justify-center">
+        <button class="btn bg-negroni-500 text-black">Beli Sekarang</button>
+        <button class="btn btn-outline text-white">Design Custom</button>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+</div>

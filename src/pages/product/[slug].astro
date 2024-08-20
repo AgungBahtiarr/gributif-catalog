@@ -1,0 +1,84 @@
+---
+const { slug } = Astro.params;
+
+import Product from "@/components/Product.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ArtistProfile from "@/components/ArtistProfile.astro";
+import Products from "@/components/landing/Products.astro";
+
+import { Image } from "astro:assets";
+---
+
+<BaseLayout>
+  <div class="relative mx-auto px-8 max-w-7xl md:px-12">
+    <div class="grid grid-cols-1 gap-6">
+      <div class="mx-auto text-center"></div>
+      <div>
+        <Product />
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <h2 class="text-xl font-semibold my-6">Tentang Pembuat</h2>
+            <ArtistProfile />
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold my-6">
+              Rekomendasi Produk Lainnya
+            </h2>
+            <div class="grid grid-cols-2 gap-4">
+              <figure>
+                <Image
+                  class="rounded-3xl shadow-2xl"
+                  src="https://cdn.dribbble.com/users/1622978/screenshots/16873134/media/7f5d72bce5b94fe1ae56484394de673f.jpg?compress=1&resize=1600x1200&vertical=top"
+                  alt=""
+                  width={1310}
+                  height={873}
+                />
+                <div class="mt-4 flex justify-between px-6">
+                  <div>
+                    <h3 class="text-sm text-negroni-500">
+                      <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"
+                        ></span>
+                        Paper bags with print
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-lg font-medium leading-6 text-white">
+                      Beige
+                    </p>
+                  </div>
+                  <p class="text-base text-tomato-500">$3</p>
+                </div>
+              </figure>
+
+              <figure>
+                <Image
+                  class="rounded-3xl shadow-2xl"
+                  src="https://cdn.dribbble.com/users/1622978/screenshots/16873134/media/7f5d72bce5b94fe1ae56484394de673f.jpg?compress=1&resize=1600x1200&vertical=top"
+                  alt=""
+                  width={1310}
+                  height={873}
+                />
+                <div class="mt-4 flex justify-between px-6">
+                  <div>
+                    <h3 class="text-sm text-negroni-500">
+                      <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"
+                        ></span>
+                        Paper bags with print
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-lg font-medium leading-6 text-white">
+                      Beige
+                    </p>
+                  </div>
+                  <p class="text-base text-tomato-500">$3</p>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
