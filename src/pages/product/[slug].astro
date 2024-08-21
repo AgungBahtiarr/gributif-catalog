@@ -1,12 +1,12 @@
 ---
-const { slug } = Astro.params;
-
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 import Product from "@/components/Product.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArtistProfile from "@/components/ArtistProfile.astro";
-import Products from "@/components/landing/Products.astro";
-
-import { Image } from "astro:assets";
+const { slug } = Astro.params;
+const products = await getEntry("products", slug);
+const artist = await getEntry("artist", products.data.artist);
 ---
 
 <BaseLayout>
@@ -14,11 +14,11 @@ import { Image } from "astro:assets";
     <div class="grid grid-cols-1 gap-6">
       <div class="mx-auto text-center"></div>
       <div>
-        <Product />
+        <Product product={products.data} />
         <div class="grid grid-cols-1 md:grid-cols-2">
           <div>
             <h2 class="text-xl font-semibold my-6">Tentang Pembuat</h2>
-            <ArtistProfile />
+            <ArtistProfile artist={artist.data} />
           </div>
 
           <div>
@@ -37,11 +37,7 @@ import { Image } from "astro:assets";
                 <div class="mt-4 flex justify-between px-6">
                   <div>
                     <h3 class="text-sm text-negroni-500">
-                      <a href="#">
-                        <span aria-hidden="true" class="absolute inset-0"
-                        ></span>
-                        Paper bags with print
-                      </a>
+                      <a href="#"> Paper bags with print </a>
                     </h3>
                     <p class="mt-1 text-lg font-medium leading-6 text-white">
                       Beige
@@ -62,11 +58,7 @@ import { Image } from "astro:assets";
                 <div class="mt-4 flex justify-between px-6">
                   <div>
                     <h3 class="text-sm text-negroni-500">
-                      <a href="#">
-                        <span aria-hidden="true" class="absolute inset-0"
-                        ></span>
-                        Paper bags with print
-                      </a>
+                      <a href="#"> Paper bags with print </a>
                     </h3>
                     <p class="mt-1 text-lg font-medium leading-6 text-white">
                       Beige

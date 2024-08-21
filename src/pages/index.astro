@@ -2,9 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/landing/Hero.astro";
 import Products from "../components/landing/Products.astro";
+import { getCollection, getEntry } from "astro:content";
+
+const products = await getCollection("products");
+
+// console.log(products);
 ---
 
 <BaseLayout>
   <Hero />
-  <Products />
+  <Products products={products} />
 </BaseLayout>
