@@ -1,0 +1,15 @@
+---
+export const partial = true;
+import Products from "@/components/landing/Products.astro";
+import { getCollection } from "astro:content";
+const products = await getCollection("products");
+const query = Astro.url.searchParams.get("query");
+
+const searchResults = products.filter((product) =>
+  product.data.name.toLowerCase().includes(query.toLowerCase()),
+);
+
+console.log(searchResults);
+---
+
+<Products products={searchResults} />

@@ -2,14 +2,19 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/landing/Hero.astro";
 import Products from "../components/landing/Products.astro";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 const products = await getCollection("products");
+const filteredProducts = [];
 
-// console.log(products);
+products.map((product, index) => {
+  if (index <= 3) {
+    filteredProducts.push(product);
+  }
+});
 ---
 
 <BaseLayout>
   <Hero />
-  <Products products={products} />
+  <Products products={filteredProducts} />
 </BaseLayout>
