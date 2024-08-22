@@ -38,7 +38,7 @@ const { product } = Astro.props;
   <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-4">
     <div class="flex flex-col gap-4">
       <Image
-        src={product.cover}
+        src=`${product.cover}`
         alt=`${product.name} Image`
         width={1000}
         height={1000}
@@ -51,14 +51,14 @@ const { product } = Astro.props;
               return (
                 <div class="grid grid-cols-2 min-w-full gap-4">
                   <Image
-                    src={product.images[index]}
+                    src=`${product.images[index]}`
                     alt="Bamboo Craft"
                     width={1000}
                     height={1000}
                     class:list={["rounded-md"]}
                   />
                   <Image
-                    src={product.images[index + 1]}
+                    src=`${product.images[index + 1]}`
                     alt="Bamboo Craft"
                     width={1000}
                     height={1000}
