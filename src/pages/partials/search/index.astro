@@ -8,8 +8,6 @@ const query = Astro.url.searchParams.get("query");
 const searchResults = products.filter((product) =>
   product.data.name.toLowerCase().includes(query.toLowerCase()),
 );
-
-console.log(searchResults);
 ---
 
 <Products products={searchResults} />
