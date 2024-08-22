@@ -1,7 +1,7 @@
 ---
 name: "Rantang Bambu"
 price: 50000
-cover: "https://timbulharjo.bantulkab.go.id/assets/files/artikel/sedang_1684122217bambu3.jpg"
+cover: "/assets/images/products/keranjangBambu.jpg"
 category: "alat rumah"
 availability: true
 stock: 30
@@ -12,9 +12,9 @@ description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendi
 purchase: "https://shoppee.com/toko"
 contact: "083122773774"
 images: 
-    - https://timbulharjo.bantulkab.go.id/assets/files/artikel/sedang_1684122217bambu3.jpg
-    - https://timbulharjo.bantulkab.go.id/assets/files/artikel/sedang_1684122217bambu3.jpg
-    - https://timbulharjo.bantulkab.go.id/assets/files/artikel/sedang_1684122217bambu3.jpg
-    - https://timbulharjo.bantulkab.go.id/assets/files/artikel/sedang_1684122217bambu3.jpg
+    - /assets/images/products/keranjangBambu.jpg
+    - /assets/images/products/keranjangBambu.jpg
+    - /assets/images/products/keranjangBambu.jpg
+    - /assets/images/products/keranjangBambu.jpg
 artist: "agungb"
 ---

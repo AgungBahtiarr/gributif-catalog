@@ -1,7 +1,7 @@
 ---
 name: "Tempeh bambu"
 price: 50000
-cover: "https://repack.id/wp-content/uploads/2022/07/Jual-Tampah-Keluar-Negeri-1024x683.jpg"
+cover: "/assets/images/products/tempeh.jpg"
 category: "alat rumah"
 availability: false
 stock: 30
@@ -12,9 +12,9 @@ description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendi
 purchase: "https://shoppee.com/toko"
 contact: "083122773774"
 images:
-  - "https://repack.id/wp-content/uploads/2022/07/Jual-Tampah-Keluar-Negeri-1024x683.jpg"
-  - "https://repack.id/wp-content/uploads/2022/07/Jual-Tampah-Keluar-Negeri-1024x683.jpg"
-  - "https://repack.id/wp-content/uploads/2022/07/Jual-Tampah-Keluar-Negeri-1024x683.jpg"
-  - "https://repack.id/wp-content/uploads/2022/07/Jual-Tampah-Keluar-Negeri-1024x683.jpg"
+  - "/assets/images/products/tempeh.jpg"
+  - "/assets/images/products/tempeh.jpg"
+  - "/assets/images/products/tempeh.jpg"
+  - "/assets/images/products/tempeh.jpg"
 artist: "agungb"
 ---
