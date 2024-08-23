@@ -4,9 +4,14 @@ import { getEntry } from "astro:content";
 import Product from "@/components/Product.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArtistProfile from "@/components/ArtistProfile.astro";
+import Products from "@/components/landing/Products.astro";
+
+import { getCollection } from "astro:content";
 const { slug } = Astro.params;
 const products = await getEntry("products", slug);
 const artist = await getEntry("artist", products.data.artist);
+
+const recomendedProduct = await getCollection("products");
 ---
 
 <BaseLayout>
@@ -22,51 +27,11 @@ const artist = await getEntry("artist", products.data.artist);
           </div>
 
           <div>
-            <h2 class="text-xl font-semibold my-6">
+            <h2 class="text-xl font-semibold mt-6">
               Rekomendasi Produk Lainnya
             </h2>
-            <div class="grid grid-cols-2 gap-4">
-              <figure>
-                <Image
-                  class="rounded-3xl shadow-2xl"
-                  src="https://cdn.dribbble.com/users/1622978/screenshots/16873134/media/7f5d72bce5b94fe1ae56484394de673f.jpg?compress=1&resize=1600x1200&vertical=top"
-                  alt=""
-                  width={1310}
-                  height={873}
-                />
-                <div class="mt-4 flex justify-between px-6">
-                  <div>
-                    <h3 class="text-sm text-negroni-500">
-                      <a href="#"> Paper bags with print </a>
-                    </h3>
-                    <p class="mt-1 text-lg font-medium leading-6 text-white">
-                      Beige
-                    </p>
-                  </div>
-                  <p class="text-base text-tomato-500">$3</p>
-                </div>
-              </figure>
-
-              <figure>
-                <Image
-                  class="rounded-3xl shadow-2xl"
-                  src="https://cdn.dribbble.com/users/1622978/screenshots/16873134/media/7f5d72bce5b94fe1ae56484394de673f.jpg?compress=1&resize=1600x1200&vertical=top"
-                  alt=""
-                  width={1310}
-                  height={873}
-                />
-                <div class="mt-4 flex justify-between px-6">
-                  <div>
-                    <h3 class="text-sm text-negroni-500">
-                      <a href="#"> Paper bags with print </a>
-                    </h3>
-                    <p class="mt-1 text-lg font-medium leading-6 text-white">
-                      Beige
-                    </p>
-                  </div>
-                  <p class="text-base text-tomato-500">$3</p>
-                </div>
-              </figure>
+            <div class="ml-[-50px] mt-[-30px]">
+              <Products products={recomendedProduct} />
             </div>
           </div>
         </div>

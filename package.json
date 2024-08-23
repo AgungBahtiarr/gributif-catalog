@@ -13,7 +13,7 @@
     "@astrojs/check": "^0.9.3",
     "@astrojs/netlify": "^5.5.1",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.14.4",
+    "astro": "^4.14.5",
     "astro-htmx": "^1.0.6",
     "htmx.org": "^1.9.12",
     "prettier": "^3.3.3",
