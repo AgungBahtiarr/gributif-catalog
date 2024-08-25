@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import QrCode from "qrcode";
+const url = Astro.url.searchParams.get("url");
+export const partial = true;
+const qrCodeUrl = await QrCode.toDataURL(url);
+---
+
+<dialog id="modal_qrcode" class="modal modal-open">
+  <div class="modal-box">
+    <form method="dialog">
+      <button
+        hx-get="/partials/qrcode/close"
+        hx-target="#modal_qrcode"
+        hx-trigger="click"
+        hx-swap="outerHTML"
+        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button
+      >
+    </form>
+    <h3 class="text-lg font-bold">Produk QrCode</h3>
+    <div>
+      <Image src={qrCodeUrl} alt="QrCode" width={1000} height={1000} />
+    </div>
+  </div>
+</dialog>
