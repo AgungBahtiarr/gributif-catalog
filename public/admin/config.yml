@@ -5,7 +5,6 @@ backend:
 media_folder: "assets/images" # Location where files will be stored in the repo
 public_folder: "assets/images" # The src attribute for uploaded media
 
-
 collections:
   - name: "products"
     label: "Products"
@@ -13,22 +12,33 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Price", name: "price", widget: "number"}
-      - {label: "Cover Image", name: "cover", widget: "image", required: true}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Availability", name: "availability", widget: "boolean", default: true}
-      - {label: "Stock", name: "stock", widget: "number"}
-      - {label: "Size", name: "size", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "string"}
-      - {label: "Material", name: "material", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Purchase Link", name: "purchase", widget: "string"}
-      - {label: "Contact", name: "contact", widget: "string"}
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Cover Image", name: "cover", widget: "image", required: true }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          # - { label: "Alat Rumah", value: "alat rumah" }
+          - { label: "Kerajinan", value: "kerajinan" }
+          - { label: "Kuliner", value: "kuliner" }
+      - {
+          label: "Availability",
+          name: "availability",
+          widget: "boolean",
+          default: true,
+        }
+      - { label: "Stock", name: "stock", widget: "number" }
+      - { label: "Size", name: "size", widget: "string" }
+      - { label: "Weight", name: "weight", widget: "string" }
+      - { label: "Material", name: "material", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Purchase Link", name: "purchase", widget: "string" }
+      - { label: "Contact", name: "contact", widget: "string" }
       - label: "Product Images"
         name: "images"
         widget: "list"
-        field: {label: Image, name: image, widget: image}
+        field: { label: Image, name: image, widget: image }
       - label: "Artist"
         name: "artist"
         widget: "relation"
@@ -43,7 +53,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Skill", name: "skill", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Skill", name: "skill", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
