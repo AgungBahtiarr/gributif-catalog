@@ -58,3 +58,4 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Skill", name: "skill", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Contact", name: "contact", widget: "string" }
