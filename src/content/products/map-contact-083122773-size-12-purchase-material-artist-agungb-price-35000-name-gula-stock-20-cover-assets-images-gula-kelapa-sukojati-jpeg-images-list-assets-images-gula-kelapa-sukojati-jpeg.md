@@ -14,6 +14,5 @@ contact: "083122773"
 images:
   - /assets/images/gula-kelapa-sukojati.jpeg
   - /assets/images/ladrang-sukojati.jpeg
-  - /assets/images/gula-kelapa-sukojati.jpeg
 artist: agungb
 ---
