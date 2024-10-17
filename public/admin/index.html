@@ -6,9 +6,15 @@
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
     <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
+    <div data-netlify-identity-menu></div>
+
+    <div data-netlify-identity-button>Login with Netlify Identity</div>
     <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
   </body>
 </html>
