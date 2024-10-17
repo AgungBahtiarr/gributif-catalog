@@ -9,7 +9,7 @@ import Products from "@/components/landing/Products.astro";
 import { getCollection } from "astro:content";
 const { slug } = Astro.params;
 const products = await getEntry("products", slug);
-const artist = await getEntry("artist", products.data.artist);
+const artist = await getEntry("artists", products.data.artist);
 
 const recomendedProduct = await getCollection("products");
 ---
