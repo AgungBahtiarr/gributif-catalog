@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: master
   repo: AgungBahtiarr/gributif-catalog
 media_folder: "assets/images" # Location where files will be stored in the repo
 public_folder: "assets/images" # The src attribute for uploaded media
