@@ -38,6 +38,8 @@ collections:
       - label: "Product Images"
         name: "images"
         widget: "list"
+        max: 3
+        min: 3
         field: { label: Image, name: image, widget: image }
       - label: "Artist"
         name: "artist"
