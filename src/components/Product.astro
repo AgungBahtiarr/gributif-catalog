@@ -4,6 +4,9 @@ import { Image } from "astro:assets";
 const { product } = Astro.props;
 
 const url = Astro.url.href;
+
+const message = "Saya Ingin Membeli Produk "
+const messageCustom = "Saya ingin melakukan pemesanan custom untuk produk "
 ---
 
 <div class="text-white">
@@ -154,8 +157,8 @@ const url = Astro.url.href;
       <div class="divider"></div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2 w-full justify-center">
-        <button class="btn bg-negroni-500 text-black">Beli Sekarang</button>
-        <button class="btn btn-outline text-white">Design Custom</button>
+        <a href={`https://wa.me/+6283122773774?text=${encodeURIComponent(message + product.name)}`} target="_blank" rel="noopener noreferrer"  class="btn bg-negroni-500 text-black">Beli Sekarang</a href="">
+        <a href={`https://wa.me/+6283122773774?text=${encodeURIComponent(messageCustom + product.name)}`} target="_blank" rel="noopener noreferrer" class="btn btn-outline text-white">Design Custom</a>
       </div>
     </div>
   </div>

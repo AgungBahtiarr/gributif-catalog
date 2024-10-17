@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 import Product from "@/components/Product.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
@@ -11,7 +10,14 @@ const { slug } = Astro.params;
 const products = await getEntry("products", slug);
 const artist = await getEntry("artists", products.data.artist);
 
-const recomendedProduct = await getCollection("products");
+const recomendedProducts = [];
+const rawRecomendedProducts = await getCollection("products");
+
+rawRecomendedProducts.map((product, index) => {
+  if (index <= 3) {
+    recomendedProducts.push(product);
+  }
+});
 ---
 
 <BaseLayout>
@@ -31,7 +37,7 @@ const recomendedProduct = await getCollection("products");
               Rekomendasi Produk Lainnya
             </h2>
             <div class="ml-[-50px] mt-[-30px]">
-              <Products products={recomendedProduct} />
+              <Products products={recomendedProducts} />
             </div>
           </div>
         </div>
