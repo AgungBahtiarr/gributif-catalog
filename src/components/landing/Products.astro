@@ -1,8 +1,6 @@
 ---
 const { products } = Astro.props;
 import { Image } from "astro:assets";
-
-
 ---
 
 <main>
@@ -13,29 +11,31 @@ import { Image } from "astro:assets";
           return (
             <a href={`/product/${product.slug}`}>
               <figure>
-              <Image
-                class="w-full rounded-3xl shadow-2xl"
-                src={product.data.cover}
-                alt="product"
-                width="1310"
-                height="873"
-              />
-              <div class="mt-4 flex justify-between px-6">
                 <div>
-                  <h3 class="text-lg text-white">
-                    <span>
-                      {product.data.name}
-                    </span>
-                  </h3>
-                  <p class="mt-1 text-sm font-medium leading-6 text-negroni-500">
-                    {product.data.category}
+                  <Image
+                    class="w-full h-96 object-cover rounded-3xl shadow-2xl"
+                    src={product.data.cover}
+                    alt="product"
+                    width="1310"
+                    height="873"
+                  />
+                </div>
+
+                <div class="mt-4 flex justify-between px-6">
+                  <div>
+                    <h3 class="text-lg text-white">
+                      <span>{product.data.name}</span>
+                    </h3>
+                    <p class="mt-1 text-sm font-medium leading-6 text-negroni-500">
+                      {product.data.category}
+                    </p>
+                  </div>
+                  <p class="text-base text-tomato-500">
+                    Rp. {product.data.price.toLocaleString("id-ID")}
                   </p>
                 </div>
-                <p class="text-base text-tomato-500">Rp. {product.data.price.toLocaleString('id-ID')}</p>
-              </div>
-            </figure>
+              </figure>
             </a>
-            
           );
         })
       }

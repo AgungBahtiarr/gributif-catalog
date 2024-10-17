@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main
+  repo: AgungBahtiarr/gributif-catalog
+media_folder: "assets/images" # Location where files will be stored in the repo
+public_folder: "assets/images" # The src attribute for uploaded media
+
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "src/content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Cover Image", name: "cover", widget: "image", required: true}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Availability", name: "availability", widget: "boolean", default: true}
+      - {label: "Stock", name: "stock", widget: "number"}
+      - {label: "Size", name: "size", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "string"}
+      - {label: "Material", name: "material", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Purchase Link", name: "purchase", widget: "string"}
+      - {label: "Contact", name: "contact", widget: "string"}
+      - label: "Product Images"
+        name: "images"
+        widget: "list"
+        field: {label: Image, name: image, widget: image}
+      - label: "Artist"
+        name: "artist"
+        widget: "relation"
+        collection: "artists"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
+
+  - name: "artists"
+    label: "Artists"
+    folder: "src/content/artists"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Skill", name: "skill", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
