@@ -3,7 +3,7 @@ backend:
   branch: master
   repo: AgungBahtiarr/gributif-catalog
 media_folder: "assets/images" # Location where files will be stored in the repo
-public_folder: "assets/images" # The src attribute for uploaded media
+public_folder: "/assets/images" # The src attribute for uploaded media
 
 collections:
   - name: "products"
@@ -19,7 +19,7 @@ collections:
         name: "category"
         widget: "select"
         options:
-          # - { label: "Alat Rumah", value: "alat rumah" }
+          # - { label: "Alat Rumah", value: "alat rumah" }/admin/index.html#/
           - { label: "Kerajinan", value: "kerajinan" }
           - { label: "Kuliner", value: "kuliner" }
       - {

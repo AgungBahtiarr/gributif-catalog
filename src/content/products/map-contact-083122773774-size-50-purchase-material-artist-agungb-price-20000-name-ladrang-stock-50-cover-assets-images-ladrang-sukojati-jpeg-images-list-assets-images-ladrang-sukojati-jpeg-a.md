@@ -1,7 +1,7 @@
 ---
 name: ladrang
 price: 20000
-cover: assets/images/ladrang-sukojati.jpeg
+cover: /assets/images/ladrang-sukojati.jpeg
 category: kuliner
 availability: true
 stock: 50
@@ -21,7 +21,7 @@ description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
 purchase: "-"
 contact: "083122773774"
 images:
-  - assets/images/ladrang-sukojati.jpeg
-  - assets/images/ladrang-sukojati.jpeg
+  - /assets/images/ladrang-sukojati.jpeg
+  - /assets/images/ladrang-sukojati.jpeg
 artist: agungb
 ---
